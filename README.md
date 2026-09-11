@@ -33,7 +33,7 @@ npm run dev
 ```
 
 This starts a local dev server (Vite will print the URL, typically
-`http://localhost:5173`).
+`http://localhost:5173` or `http://localhost:5174/F11p80x-Ch4113n93/`).
 
 Other available scripts:
 
