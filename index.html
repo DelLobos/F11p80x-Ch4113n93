@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Flipbox Builder</title>
+    <script>
+      // Set the theme attribute before first paint so there's no flash of
+      // the wrong theme. Mirrors the storage key/format used by
+      // src/composables/useTheme.js (kept in sync manually since this
+      // runs before any app code loads).
+      (function () {
+        try {
+          var stored = localStorage.getItem('flipbox-builder:theme');
+          var theme = stored ? JSON.parse(stored) : null;
+          if (theme !== 'light' && theme !== 'dark') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (err) {
+          // localStorage may be unavailable (e.g. disabled); fall back to
+          // the default light theme rather than failing to load the app.
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+

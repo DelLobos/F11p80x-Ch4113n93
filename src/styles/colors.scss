@@ -1,0 +1,49 @@
+// Shared color palette. Import with:
+//   @use '<relative-path-to>/styles/colors' as *;
+
+// Brand
+$color-ink: #3a3532;
+$color-accent: #f0a202;
+$color-accent-dark: #c98600;
+$color-accent-hover: #d99500; // >=4.5:1 with $color-ink text
+$color-accent-light: #fdf0d5;
+
+// Neutrals
+$color-text: #1b1f23;
+$color-muted: #57606a;
+$color-placeholder: #6b7280; // >=4.5:1 on white
+$color-border: #d0d7de;
+$color-bg: #f6f8fa;
+$color-hover-bg: #f0f3f6;
+$color-white: #ffffff;
+
+// Theme-switchable tokens. Use var(--color-*) for anything that should
+// flip between light/dark. $color-* stays fixed regardless of theme.
+// Toggled via data-theme="dark" on <html> - see useTheme.js.
+:root {
+  --color-page-bg: #{$color-bg};
+  --color-surface: #{$color-white};
+  --color-surface-alt: #{$color-bg};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
+  --color-placeholder: #{$color-placeholder};
+  --color-border: #{$color-border};
+  --color-hover-bg: #{$color-hover-bg};
+  --color-shadow-rgb: 27, 31, 35;
+  --color-badge-bg: #{$color-accent-light};
+  --color-badge-text: #{$color-ink};
+}
+
+:root[data-theme='dark'] {
+  --color-page-bg: #171b1f;
+  --color-surface: #22272e;
+  --color-surface-alt: #2b3138;
+  --color-text: #e6edf3;
+  --color-muted: #9ba7b4;
+  --color-placeholder: #9ba7b4;
+  --color-border: #3d444d;
+  --color-hover-bg: #2b3138;
+  --color-shadow-rgb: 0, 0, 0;
+  --color-badge-bg: #4a3410;
+  --color-badge-text: #ffcf70;
+}

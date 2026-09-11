@@ -1,0 +1,10 @@
+@use '../../styles/colors' as *;
+
+.field label {
+  color: var(--color-text);
+}
+
+.save-status {
+  min-height: 1.2em;
+  color: var(--color-muted);
+}
