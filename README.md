@@ -4,6 +4,8 @@ A Vue 3 + Vite app for building a "flipbox": a card with rich-text front and
 back content that flips between the two sides. Edits made in the builder are
 reflected live in the preview, with no manual save or refresh required.
 
+**Live demo:** https://dellobos.github.io/F11p80x-Ch4113n93/
+
 ## Features
 
 - Rich-text editing (via TipTap) for both the front and back of the card,
