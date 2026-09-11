@@ -76,6 +76,8 @@
 
   &-back {
     transform: rotateX(180deg);
+    background: var(--color-surface-back);
+    border-top-color: $color-accent-dark;
   }
 
   &-placeholder {

@@ -32,6 +32,7 @@ $color-white: #ffffff;
   --color-shadow-rgb: 27, 31, 35;
   --color-badge-bg: #{$color-accent-light};
   --color-badge-text: #{$color-ink};
+  --color-surface-back: #fdf3df;
 }
 
 :root[data-theme='dark'] {
@@ -46,4 +47,5 @@ $color-white: #ffffff;
   --color-shadow-rgb: 0, 0, 0;
   --color-badge-bg: #4a3410;
   --color-badge-text: #ffcf70;
+  --color-surface-back: #332a15;
 }
